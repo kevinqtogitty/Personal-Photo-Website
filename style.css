@@ -1,0 +1,106 @@
+/*globa*/
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    position: fixed;
+}
+
+/*Header*/
+h1 {
+    font-size: 60px;
+    transition-duration: 300ms;
+    width: fit-content;
+}
+
+h1:hover {
+    transform: translateY(-15px);
+}
+
+/*Div and header placement corrections*/
+div nav, h1 {
+    margin-left: 30px;
+    margin-right: 170px;
+    margin-top: 30px;
+}
+
+nav {
+    width: 150px;
+}
+
+.main-container {
+    display: flex;
+}
+
+/*Display photo*/
+img {
+    margin-top: 20px;
+    width: 70%;
+    height: auto;
+    transition-duration: 1s;
+}
+
+/*Navigation items*/
+nav ul {
+    position: fixed;
+}
+
+nav ul li {
+    margin-bottom: 8px;
+    display: block;
+    transition-duration: 700ms;
+}
+
+/*display subnavigation on hover*/
+.projects {
+    transition-duration: 500ms;
+}
+
+.projects:hover {
+    transform: translate(10px);
+}
+
+nav ul .projects:hover .dropdown {
+    visibility: visible;
+    opacity: 1;
+}
+
+.dropdown {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 1s, opacity 700ms linear;
+    margin-left: 90px;
+    width: 200px;
+    margin-top: -20px;
+    background-color: rgb(228, 228, 208);
+    padding: 5px;
+    border-radius: 6px;
+    box-shadow: 5px 5px 5px grey;
+}
+
+nav ul li:hover .dropdown {
+    display: block;
+}
+
+/*Link changes*/
+a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li:hover {
+    cursor: pointer;
+    opacity: .6;
+    border-radius: 8px;
+    transform: translateX(10px);
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+
