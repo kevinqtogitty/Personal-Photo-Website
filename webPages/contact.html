@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>Kevin To Photography</title>
+    <title>Kevin To Photography (contact)</title>
 
     <link rel="stylesheet" href="/Users/kevinto/repos/photoWebsite/Personal-Photo-Website/style.css">
     <script src="/Users/kevinto/repos/photoWebsite/Personal-Photo-Website/main.js" defer></script>
@@ -35,8 +35,23 @@
                 </ul>
             </nav>
 
-            <img src="/Users/kevinto/repos/photoWebsite/Personal-Photo-Website/images/R0030638.jpg" alt="Lightbulbs">
+            <div class="formContainer">
+                <form>
+                    <h3>Get in touch!</h3>
+                        <label for=""></label>
+                        <input type="text" name="name" placeholder=" You're name" required>
+                        <input type="email" name="email" placeholder=" example@gmail.com" required>
+                        <textarea name="message" id="message" rows="10" placeholder=" Write here :)"></textarea>
+
+                    
+                    <input type="hidden" name="_subject" value="New E-mail from Kevin To Photography! Woooo!">
+                    <input type="hidden" name="_next" value="https://yourdomain.co/thankYou.html">
+                    <button type="submit" id="formButton">Send</button>
+            </form>
         </div>
-    
+
+        </div>
+        <footer> <small>&copy; Copyright 2022, Kevin To images</small> </footer> 
+
 </body>
 </html>
