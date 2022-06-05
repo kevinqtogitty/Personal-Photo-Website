@@ -6,10 +6,6 @@
 // const about = document.querySelector("#about");
 // const instagram = document.querySelector("#instagram");
 
-const projects = document.querySelector('.projects');
-
-const submenuDisappear = document.querySelector('#submenu');
-
 // document.querySelectorAll('.navItem').forEach(item => {
 //     item.addEventListener('mouseover', e => {
 //         item.style.color = 'white';
@@ -43,3 +39,42 @@ const submenuDisappear = document.querySelector('#submenu');
 // submenuDisappear.addEventListener('mouseleave', () => {
 //     submenu.style.display = 'none';
 // })
+
+console.log('this is working');
+
+let emailField = document.getElementById("email");
+const formButton = document.querySelector('#formButton');
+const form = document.getElementById('contactForm');
+
+console.log(form);
+
+form.onsubmit = validateEmail, sendEmail;
+
+function validateEmail(event) {
+
+    //Prevents automatic page reload
+    event.preventDefault();
+
+    const formData = new FormData(event.target)
+    const formProperties = Object.fromEntries(formData);
+
+    console.log(formProperties);
+
+    console.log(event);
+
+    const regex_pattern = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    
+    if (regex_pattern.test(formProperties.email)) {
+        console.log('The email address is valid');
+    }
+    else {
+        console.log('The email address is not valid');
+    }
+}
+
+function sendEmail(event) {
+    const link = 'kevinq.to@gmail.com';
+    + "kevinq.to@gmail.com"
+    + "&subject=" + escape("This is my subject")
+    + "&body=" + escape(document.getElementById('Body').value)
+}

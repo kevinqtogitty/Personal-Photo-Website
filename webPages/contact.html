@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=, initial-scale=1.0">
+    <meta name="viewport" content="initial-scale=1.0">
     <title>Kevin To Photography (contact)</title>
 
     <link rel="stylesheet" href="/Users/kevinto/repos/photoWebsite/Personal-Photo-Website/style.css">
-    <script src="/Users/kevinto/repos/photoWebsite/Personal-Photo-Website/main.js" defer></script>
+        
     <style>@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');</style>
 </head>
 <body>
@@ -36,22 +36,22 @@
             </nav>
 
             <div class="formContainer">
-                <form>
+                <form id="contactForm">
                     <h3>Get in touch!</h3>
-                        <label for=""></label>
-                        <input type="text" name="name" placeholder=" You're name" required>
-                        <input type="email" name="email" placeholder=" example@gmail.com" required>
-                        <textarea name="message" id="message" rows="10" placeholder=" Write here :)"></textarea>
+                        <label></label>
+                        <input type="text" id="name" name="name" placeholder="You're name" required>
+                        <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
+                        <textarea name="message" id="message" rows="10" placeholder="Write here :)"></textarea>
 
                     
-                    <input type="hidden" name="_subject" value="New E-mail from Kevin To Photography! Woooo!">
                     <input type="hidden" name="_next" value="https://yourdomain.co/thankYou.html">
-                    <button type="submit" id="formButton">Send</button>
+                    <button type="submit" id="formButton" onclick="sendEmail()">Send</button>
             </form>
         </div>
 
         </div>
         <footer> <small>&copy; Copyright 2022, Kevin To images</small> </footer> 
-
+        <script src="https://smtpjs.com/v3/smtp.js"></script>
+        
 </body>
 </html>
