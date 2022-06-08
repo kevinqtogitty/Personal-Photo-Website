@@ -40,6 +40,20 @@
 //     submenu.style.display = 'none';
 // })
 
+// function sendEmail() {
+//     Email.send({
+//         Host : "smtp.gmail.com",
+//         Username : "kevinq.to@gmail.com",
+//         Password : "Ethereum6767",
+//         To : 'kevinq.to@gmail.com',
+//         From : document.getElementById(email).value,
+//         Subject : "Somebody want to talk to you! WOOOOOO",
+//         Body : "And this is the body",
+//     }).then(
+//       message => alert(message)
+//     );
+// }
+
 console.log('this is working');
 
 let emailField = document.getElementById("email");
@@ -48,11 +62,13 @@ const form = document.getElementById('contactForm');
 
 console.log(form);
 
-form.onsubmit = validateEmail, sendEmail;
+form.onsubmit = validateEmail();
+
+//formButton.addEventListener('onClick', validateEmail);
+
 
 function validateEmail(event) {
 
-    //Prevents automatic page reload
     event.preventDefault();
 
     const formData = new FormData(event.target)
@@ -72,9 +88,18 @@ function validateEmail(event) {
     }
 }
 
-function sendEmail(event) {
-    const link = 'kevinq.to@gmail.com';
-    + "kevinq.to@gmail.com"
-    + "&subject=" + escape("This is my subject")
-    + "&body=" + escape(document.getElementById('Body').value)
-}
+//copy to clipboard function
+function copyToClipboard() {
+    /* Get the text field */
+    let copyText = 'kevinq.to@gmail.com';
+  
+    /* Select the text field */
+    copyText.select();
+    copyText.setSelectionRange(0, 99999); /* For mobile devices */
+  
+     /* Copy the text inside the text field */
+    navigator.clipboard.writeText(copyText.value);
+  
+    /* Alert the copied text */
+    alert("Copied the text: " + copyText.value);
+  }

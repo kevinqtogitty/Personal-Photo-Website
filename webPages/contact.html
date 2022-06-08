@@ -7,7 +7,7 @@
     <title>Kevin To Photography (contact)</title>
 
     <link rel="stylesheet" href="/Users/kevinto/repos/photoWebsite/Personal-Photo-Website/style.css">
-        
+    <script src="/Users/kevinto/repos/photoWebsite/Personal-Photo-Website/main.js"></script>
     <style>@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');</style>
 </head>
 <body>
@@ -33,6 +33,13 @@
                     <li><a href="#">Instagram</a></li>
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
+
+                <ul class="email-info">
+                    <li>
+                        kevinq.to@gmail.com
+                    </li>
+                </ul>
+
             </nav>
 
             <div class="formContainer">
@@ -45,7 +52,7 @@
 
                     
                     <input type="hidden" name="_next" value="https://yourdomain.co/thankYou.html">
-                    <button type="submit" id="formButton" onclick="sendEmail()">Send</button>
+                    <button type="submit" id="formButton" onclick="validateEmail()">Send</button>
             </form>
         </div>
 

@@ -1,3 +1,12 @@
+/*MAIN CSS
+-index.html
+-about.html
+-contact.html
+-store.html
+-thankYou.html
+*/
+
+
 /*globa*/
 * {
     margin: 0;
@@ -10,6 +19,7 @@ body {
     width: 100%;
     min-height: 100%;
     position: fixed;
+    border: solid blue;
 }
 
 /*Header*/
@@ -37,22 +47,36 @@ nav {
 .main-container {
     height: 84%;
     display: flex;
+    border: solid black;
+    column-gap: 0px;
 }
 
 /*Display photo*/
 img {
     margin-top: 20px;
-    width: 70%;
+    width: 600px;
     height: auto;
     transition-duration: 1s;
+    padding-left: -100px;
 }
 
 /*Navigation items*/
 nav {
     height: 220px;
+    width: 100px;
 }
 nav ul {
     position: fixed;
+}
+
+.email-info {
+    margin-top: 250px;
+    border: 0;
+    background-color: white;
+    cursor: pointer;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 900;
 }
 
 nav ul li {
@@ -185,14 +209,13 @@ textarea {
     cursor: pointer;
 }
 
-
-
-
 /*footer*/
 footer {
-    position: absolute;
+    position: relative;
     margin-left: 10px;
     margin-top: 8px;
     font-size: x-small;
 }
+
+
 
