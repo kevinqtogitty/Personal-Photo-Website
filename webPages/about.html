@@ -34,9 +34,14 @@
                     <li><a href="contact.html">Contact</a></li>
                 </ul>
                 
-                <button class="email-info" onclick="copyToClipboard()">
+                <ul class="email-info">
+                    <li class="email" onclick="copyToClipboard(), copiedToClipboard()">
                         kevinq.to@gmail.com
-                </button>
+                        <ul class="dropdown" >
+                            <li class="tooltip">Click to copy!</li>
+                        </ul>
+                    </li>
+                </ul>
 
             </nav>
 

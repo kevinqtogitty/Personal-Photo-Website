@@ -18,8 +18,6 @@ body {
     height: 100%;
     width: 100%;
     min-height: 100%;
-    position: fixed;
-    border: solid blue;
 }
 
 /*Header*/
@@ -27,10 +25,13 @@ h1 {
     font-size: 60px;
     transition-duration: 300ms;
     width: fit-content;
+    position: fixed;
+    animation: header-load 1500ms;
 }
 
-h1:hover {
-    transform: translateY(-15px);
+@keyframes header-load {
+    0%   {transform: translateY(-200%);}
+    100% {transform: translateY(0);}
 }
 
 /*Div and header placement corrections*/
@@ -42,19 +43,19 @@ div nav, h1 {
 
 nav {
     width: 150px;
+    top: 100px;
 }
 
 .main-container {
     height: 84%;
+    width: 100%;
     display: flex;
-    border: solid black;
-    column-gap: 0px;
 }
 
 /*Display photo*/
 img {
     margin-top: 20px;
-    width: 600px;
+    width: 1000px;
     height: auto;
     transition-duration: 1s;
     padding-left: -100px;
@@ -63,26 +64,62 @@ img {
 /*Navigation items*/
 nav {
     height: 220px;
-    width: 100px;
-}
-nav ul {
+    animation: nav-load 2500ms;
+    animation-timing-function: ease-in-out;
     position: fixed;
 }
 
-.email-info {
-    margin-top: 250px;
-    border: 0;
-    background-color: white;
-    cursor: pointer;
-    font-size: 20px;
-    font-style: italic;
-    font-weight: 900;
+@keyframes nav-load {
+    0%   {transform: translateX(-100%);opacity: -100;}
+    50%  {transform: translateX(35px); opacity: 1;}
+    100% {transform: translateX(0);}
+}
+
+nav ul {
+    position: fixed;
 }
 
 nav ul li {
     margin-bottom: 8px;
     display: block;
     transition-duration: 700ms;
+}
+
+/*navigation email, hover to copy*/
+.email-info {
+    margin-top: 290px;
+    position: fixed;
+    animation: email-load 5000ms;
+}
+
+@keyframes email-load {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+
+.email .dropdown{
+    display: none;
+    top: -20px;
+    left: -72px;
+    padding: 0px;
+    width: max-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    background-color: black;
+    color: #fff;
+}
+
+.email:hover .dropdown {
+    display: block;
+    opacity: 1;
+    cursor: default;
+}
+
+.email .dropdown li:hover {
+    transform: translateX(0px);
+    cursor: default;
 }
 
 /*display subnavigation on hover*/
@@ -100,14 +137,14 @@ nav ul .projects:hover .dropdown {
 }
 
 .dropdown {
-    visibility: hidden;
+    display: none;
     opacity: 0;
     transition: visibility 1s, opacity 700ms linear;
     margin-left: 90px;
-    width: 200px;
+    width: 160px;
     margin-top: -20px;
     background-color: rgb(228, 228, 208);
-    padding: 5px;
+    padding: 7px;
     border-radius: 6px;
     box-shadow: 5px 5px 5px grey;
 }
@@ -136,31 +173,26 @@ a:visited {
 /*About section*/
 .aboutHeader {
     font-size: 50px;
-    margin-bottom: 40px;
-    margin-top: -50px;
+    margin-bottom: 10px;
 }
 
 .aboutContainer {
-    padding: 40px;
-    margin: 20px;
+    padding: 20px;
     height: fit-content;
+    background-color: #fff;
+    position: absolute;
+    left: 910px;
+    top: 110px;
+    right: 100px;
+    border-radius: 6px;
 }
 
 .borderControl {
     height: 400px;
     width: 600px;
-    margin-left: 100px;
-}
-
-/*Quote*/
-blockquote {
-    margin-left: 17%;
-    margin-top: 50px;
-    font-size: 2rem;
-    font-weight: bolder;
-    font-style: italic;
-    width: 70%;
-    text-align: center;
+    left: 320px;
+    top: 100px;
+    position: relative;
 }
 
 /*Form Submission*/
@@ -211,10 +243,10 @@ textarea {
 
 /*footer*/
 footer {
-    position: relative;
-    margin-left: 10px;
-    margin-top: 8px;
-    font-size: x-small;
+    position: fixed;
+    top: 800px;
+    left: 5px;
+    font-size: small;
 }
 
 

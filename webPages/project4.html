@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Kevin To Photography</title>
 
-    <link rel="stylesheet" href="/Users/kevinto/repos/photoWebsite/Personal-Photo-Website/style.css">
+    <link rel="stylesheet" href="/Users/kevinto/repos/photoWebsite/Personal-Photo-Website/stylesheets/styleProjects.css">
     <script src="/Users/kevinto/repos/photoWebsite/Personal-Photo-Website/main.js" defer></script>
     <style>@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300&display=swap');</style>
 </head>
@@ -35,14 +35,40 @@
                 </ul>
 
                 <ul class="email-info">
-                    <li>
+                    <li class="email" onclick="copyToClipboard(), copiedToClipboard()">
                         kevinq.to@gmail.com
+                        <ul class="dropdown" >
+                            <li class="tooltip">Click to copy!</li>
+                        </ul>
                     </li>
                 </ul>
 
             </nav>
 
-            <img src="/Users/kevinto/repos/photoWebsite/Personal-Photo-Website/images/R0030638.jpg" alt="Lightbulbs">
+            <div class="carousel-container">
+                <ul>
+                    <li class="slide">
+                        <img class="slide1" src="/Users/kevinto/repos/photoWebsite/Personal-Photo-Website/images/below/36332688456_dec10c5af0_c.jpg" alt="">
+                    </li>
+                    <li class="slide">
+                        <img class="slide2" src="/Users/kevinto/repos/photoWebsite/Personal-Photo-Website/images/below/35459573793_be0510a107_c.jpg" alt="">
+                    </li>
+                    <li class="slide">
+                        <img class="slide3" src="/Users/kevinto/repos/photoWebsite/Personal-Photo-Website/images/below/35459571113_fc56936064_c.jpg" alt="">
+                    </li>
+                    <li class="slide">
+                        <img src="/Users/kevinto/repos/photoWebsite/Personal-Photo-Website/images/below/365038_0003.jpg" alt="" class="slide4">
+                    </li>
+                    <li class="slide">
+                        <img src="/Users/kevinto/repos/photoWebsite/Personal-Photo-Website/images/below/365038_0005.jpg" alt="" class="slide4">
+                    </li>
+                    <li class="slide">
+                        <img src="/Users/kevinto/repos/photoWebsite/Personal-Photo-Website/images/below/36733421832_28614c42db_c.jpg" alt="" class="slide4">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        
         </div>
         <footer> <small>&copy; Copyright 2022, Kevin To images</small> </footer> 
     

@@ -1,4 +1,6 @@
-/*globa*/
+/*Project Pages CSS*/
+
+/*global*/
 * {
     margin: 0;
     padding: 0;
@@ -17,16 +19,19 @@ h1 {
     transition-duration: 300ms;
     width: fit-content;
     position: fixed;
+    animation: header-load 1500ms;
 }
 
-h1:hover {
-    transform: translateY(-15px);
+@keyframes header-load {
+    0%   {transform: translateY(-200%);}
+    100% {transform: translateY(0);}
 }
 
 /*Div and header placement corrections*/
 div nav, h1 {
     margin-left: 30px;
     margin-top: 30px;
+    margin-top: 10px;
 }
 
 nav {
@@ -37,9 +42,6 @@ nav {
     height: 84%;
     width: 100%;
     display: flex;
-    border: solid black;
-    overflow: auto;
-
 }
 
 /*Display photo*/
@@ -53,15 +55,62 @@ img {
 /*Navigation items*/
 nav {
     height: 220px;
+    animation: nav-load 2500ms;
+    animation-timing-function: ease-in-out;
+    position: fixed;
 }
+
+@keyframes nav-load {
+    0%   {transform: translateX(-100%);opacity: -100;}
+    50%  {transform: translateX(35px); opacity: 1;}
+    100% {transform: translateX(0);}
+}
+
 nav ul {
     position: fixed;
     margin-top: 100px;
 }
 
+nav ul li {
+    margin-bottom: 8px;
+    display: block;
+    transition-duration: 700ms;
+}
+
+/*navigation email, hover to copy*/
 .email-info {
-    top: 350px;
+    margin-top: 360px;
     position: fixed;
+    animation: email-load 5000ms;
+}
+
+@keyframes email-load {
+    0%   {opacity: 0;}
+    100% {opacity: 1;}
+}
+
+.email .dropdown{
+    display: none;
+    top: -20px;
+    left: -72px;
+    padding: 0px;
+    width: max-content;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 6px;
+    background-color: black;
+    color: #fff;
+}
+
+.email:hover .dropdown {
+    display: block;
+    opacity: 1;
+    cursor: default;
+}
+
+.email .dropdown li:hover {
+    transform: translateX(0px);
+    cursor: default;
 }
 
 nav ul li {
@@ -85,7 +134,7 @@ nav ul .projects:hover .dropdown {
 }
 
 .dropdown {
-    visibility: hidden;
+    display: none;
     opacity: 0;
     transition: visibility 1s, opacity 700ms linear;
     margin-left: 90px;
@@ -118,69 +167,26 @@ a:visited {
     text-decoration: none;
 }
 
-/*About section*/
-.aboutHeader {
-    font-size: 50px;
-    margin-bottom: 40px;
-    margin-top: -50px;
-}
-
-.aboutContainer {
-    padding: 40px;
-    margin: 20px;
-    height: fit-content;
-}
-
-.borderControl {
-    height: 400px;
-    width: 600px;
-    margin-left: 100px;
-}
-
-/*Quote*/
-blockquote {
-    margin-left: 17%;
-    margin-top: 50px;
-    font-size: 2rem;
-    font-weight: bolder;
-    font-style: italic;
-    width: 70%;
-    text-align: center;
-}
-
 /*Carousel image*/
-
 .carousel-container {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: center;
-    margin-top: 120px;
+    top: 100px;
+    left: 100px;
+    position: relative;
 }
 
 .slide {
     list-style: none;
+    text-align: center;
 }
+
 .slide img {
     height: 550px;
     width: auto;
     position: relative;
-}
-
-/*Form Submission*/
-.formContainer {
-    height: fit-content;
-    width: fit-content;
-    margin-left: 150px;
-    margin-top: 80px;
-    box-shadow: 5px 5px 5px grey;}
-
-form {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    background-color: rgb(228, 228, 208);
-    border-radius: 6px;
 }
 
 h3 {
@@ -215,10 +221,10 @@ textarea {
 
 /*footer*/
 footer {
-    position: relative;
-    margin-left: 10px;
-    margin-top: 8px;
-    font-size: x-small;
+    position: fixed;
+    top: 800px;
+    left: 5px;
+    font-size: small;
 }
 
 

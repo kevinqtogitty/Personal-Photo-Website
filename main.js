@@ -54,13 +54,9 @@
 //     );
 // }
 
-console.log('this is working');
-
 let emailField = document.getElementById("email");
 const formButton = document.querySelector('#formButton');
 const form = document.getElementById('contactForm');
-
-console.log(form);
 
 form.onsubmit = validateEmail();
 
@@ -90,16 +86,20 @@ function validateEmail(event) {
 
 //copy to clipboard function
 function copyToClipboard() {
-    /* Get the text field */
-    let copyText = 'kevinq.to@gmail.com';
-  
-    /* Select the text field */
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); /* For mobile devices */
-  
-     /* Copy the text inside the text field */
-    navigator.clipboard.writeText(copyText.value);
-  
-    /* Alert the copied text */
-    alert("Copied the text: " + copyText.value);
-  }
+    let copyText = document.querySelector('.email').innerText;
+    let copyTextMod = copyText.substring(0, 19)
+    navigator.clipboard.writeText(copyTextMod);
+}
+
+function copiedToClipboard() {
+    document.querySelector('.tooltip').innerText = 'Copied to clipboard!';
+    let copied = document.querySelector('.email .dropdown');
+    copied.style.left = '-95px';
+}
+
+const revert = document.querySelector('.email');
+
+revert.addEventListener('mouseenter', () => {
+    console.log('This is working');
+    document.querySelector('.tooltip').innerText = 'Click to copy!';
+})
