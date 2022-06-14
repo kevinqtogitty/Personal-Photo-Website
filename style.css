@@ -206,8 +206,8 @@ a:visited {
 .formContainer {
     height: fit-content;
     width: fit-content;
-    margin-left: 150px;
-    margin-top: 80px;
+    margin-left: 500px;
+    margin-top: 120px;
     box-shadow: 5px 5px 5px grey;}
 
 form {
