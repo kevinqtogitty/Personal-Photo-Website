@@ -1,66 +1,55 @@
-// const home = document.getElementById("home");
-// const faces = document.querySelector("#faces");
-// const landscapes = document.querySelector("#landscapes");
-// const projects = document.querySelector("#projects");
-// const store = document.querySelector("#store");
-// const about = document.querySelector("#about");
-// const instagram = document.querySelector("#instagram");
+//Image carousel
+let slidePosition = 0;
+const slides = document.getElementsByClassName('carousel__item');
+const totalSlides = slides.length;
 
-// document.querySelectorAll('.navItem').forEach(item => {
-//     item.addEventListener('mouseover', e => {
-//         item.style.color = 'white';
-//     })
-// })
+document.
+  getElementById('carousel__button--next')
+  .addEventListener("click", function() {
+    moveToNextSlide();
+  });
+document.
+  getElementById('carousel__button--prev')
+  .addEventListener("click", function() {
+    moveToPrevSlide();
+  });
 
-// document.querySelectorAll('.navItem').forEach(item => {
-//     item.addEventListener('mouseout', e => {
-//         item.style.color = 'black';
-//     })
-// })
+function updateSlidePosition() {
+  for (let slide of slides) {
+    slide.classList.remove('carousel__item--visible');
+    slide.classList.add('carousel__item--hidden');
+  }
+
+  slides[slidePosition].classList.add('carousel__item--visible');
+}
+
+function moveToNextSlide() {
+  if (slidePosition === totalSlides - 1) {
+    slidePosition = 0;
+  } else {
+    slidePosition++;
+  }
+
+  updateSlidePosition();
+}
+
+function moveToPrevSlide() {
+  if (slidePosition === 0) {
+    slidePosition = totalSlides - 1;
+  } else {
+    slidePosition--;
+  }
+
+  updateSlidePosition();
+}
 
 
-// function mouseover(item) {
-//     item.style.color = 'white';
-// }
-
-// function mouseout(item) {
-//     item.style.color = 'black';
-// }
-
-
-// projects.addEventListener('mouseover', () => {
-//     submenu.style.display = 'block';
-// })
-
-// // projects.addEventListener('mouseout', () => {
-// //     submenu.style.display = 'none';
-// // })
-
-// submenuDisappear.addEventListener('mouseleave', () => {
-//     submenu.style.display = 'none';
-// })
-
-// function sendEmail() {
-//     Email.send({
-//         Host : "smtp.gmail.com",
-//         Username : "kevinq.to@gmail.com",
-//         Password : "Ethereum6767",
-//         To : 'kevinq.to@gmail.com',
-//         From : document.getElementById(email).value,
-//         Subject : "Somebody want to talk to you! WOOOOOO",
-//         Body : "And this is the body",
-//     }).then(
-//       message => alert(message)
-//     );
-// }
 
 let emailField = document.getElementById("email");
 const formButton = document.querySelector('#formButton');
 const form = document.getElementById('contactForm');
 
 form.onsubmit = validateEmail();
-
-//formButton.addEventListener('onClick', validateEmail);
 
 
 function validateEmail(event) {
@@ -103,3 +92,4 @@ revert.addEventListener('mouseenter', () => {
     console.log('This is working');
     document.querySelector('.tooltip').innerText = 'Click to copy!';
 })
+

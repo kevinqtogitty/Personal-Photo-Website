@@ -87,7 +87,7 @@ nav ul li {
 
 /*navigation email, hover to copy*/
 .email-info {
-    margin-top: 290px;
+    margin-top: 300px;
     position: fixed;
     animation: email-load 5000ms;
 }

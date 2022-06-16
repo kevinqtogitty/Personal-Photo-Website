@@ -80,7 +80,7 @@ nav ul li {
 
 /*navigation email, hover to copy*/
 .email-info {
-    margin-top: 360px;
+    margin-top: 400px;
     position: fixed;
     animation: email-load 5000ms;
 }
@@ -168,12 +168,110 @@ a:visited {
     text-decoration: none;
 }
 
-/*Grid carousel*/
+.insta_icon {
+    position: relative;
+    width: 30px;
+    height: auto;
+    top: 19rem;
+    cursor: pointer;
+}
+
+
+/*Image carousel*/
+.carousel {
+    overflow: hidden;
+    max-width: 600px;
+    position: relative;
+    height: 720px;
+  }
+
+  .slide__info {
+    position: relative;
+    font-weight: 900;
+    visibility: hidden;
+    margin-top: -280px;
+    width: 90%;
+    background: rgba(0%, 0%, 0%, .3);
+    left: 1rem;
+    padding: 10px;
+    color: #fff;
+  }
+  
+  .carousel__item:hover .slide__info {
+    visibility: visible;
+  }
+
+  .carousel .carousel__item,
+  .carousel .carousel__item--hidden {
+    display: none;
+  }
+  
+  .carousel .carousel__item img {
+    width: 100%;
+    max-width: 600px;
+    height: 100%;
+  }
+  
+  .carousel .carousel__item--visible {
+    display: block;
+    animation: fadeVisibility 0.5s;
+  }
+  
+  .carousel .carousel__actions {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  
+  .carousel .carousel__actions button {
+    border-radius: 50px;
+    border: 0;
+    font-weight: bold;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+  }
+  
+  .carousel .carousel__actions button#carousel__button--prev {
+    margin-left: 20px;
+    transition-duration: 1000ms;
+    opacity: .7;
+  }
+
+  .carousel .carousel__actions button#carousel__button--prev:hover {
+    opacity: 1;
+  }
+
+  .carousel .carousel__actions button#carousel__button--next {
+    margin-right: 20px;
+    transition-duration: 1000ms;
+    opacity: .7;
+  }
+
+  .carousel .carousel__actions button#carousel__button--next:hover {
+    opacity: 1;
+  }
+  
+  @keyframes fadeVisibility {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+      transform: opacity linear;
+    }
+  }
+
+
+/*Grid*/
 section {
     height: fit-content;
     width: 80%;
     text-align: left;
-    margin-bottom: 5rem;
+    margin-bottom: 3rem;
 }
 
 #landscapes {
@@ -223,15 +321,11 @@ section {
     height: auto;
     width: 400px;
     border-radius: 5px;
-    animation: fadein 3000ms;
-}
-
-.grid-container img:hover {
-    transform: scale(1.3);
+    animation: fadein 2000ms;
 }
 
 #assala-flex img:hover {
-    transform: scale(2);
+    transform: scale(1.6);
 }
 
 #assala-flex img {
@@ -269,15 +363,12 @@ section {
     width: auto;
     margin-top: -22px;
     padding: 16px;
-    color: black;
+    color: white;
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
-    border: solid red;
-    right: 60rem;
-    top: 20rem;
   }
   
   /* Position the "next button" to the right */

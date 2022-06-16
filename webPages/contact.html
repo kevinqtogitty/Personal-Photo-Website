@@ -27,6 +27,7 @@
                             <li><a href="project4.html">Below</a></li>
                         </ul>
                     </li>
+                    <br />
                     <li><a href="store.html">Store</a></li>
                     <li><a href="about.html">About</a></li>
                     <li><a href="#">Instagram</a></li>
@@ -44,22 +45,19 @@
             </nav>
 
             <div class="formContainer">
-                <form id="contactForm">
+                <form id="contactForm" action="https://formsubmit.co/kevinq.to@gmail.com" method="POST">
                     <h3>Get in touch!</h3>
-                        <label></label>
+
                         <input type="text" id="name" name="name" placeholder="You're name" required>
                         <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
                         <textarea name="message" id="message" rows="10" placeholder="Write here :)"></textarea>
+                        <input type="hidden" name="_subject" value="New submission!">
 
-                    
-                    <input type="hidden" name="_next" value="https://yourdomain.co/thankYou.html">
-                    <button type="submit" id="formButton" onclick="validateEmail()">Send</button>
-            </form>
-        </div>
+                        <button type="submit" id="formButton" onclick="validateEmail()">Send</button>
+                </form>
+            </div>
 
         </div>
-        <footer> <small>&copy; Copyright 2022, Kevin To images</small> </footer> 
-        <script src="https://smtpjs.com/v3/smtp.js"></script>
-        
+        <footer> <small>&copy; Copyright 2022, Kevin To images</small> </footer>         
 </body>
 </html>
