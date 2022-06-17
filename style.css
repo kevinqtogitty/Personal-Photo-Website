@@ -38,7 +38,7 @@ h1 {
 div nav, h1 {
     margin-left: 30px;
     margin-right: 170px;
-    margin-top: 30px;
+    margin-top: 10px;
 }
 
 nav {
@@ -168,6 +168,14 @@ nav ul li:hover {
 
 a:visited {
     text-decoration: none;
+}
+
+.insta_icon {
+    position: relative;
+    width: 30px;
+    height: auto;
+    top: 12.5rem;
+    cursor: pointer;
 }
 
 /*About section*/
