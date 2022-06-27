@@ -348,12 +348,12 @@ section {
   }
   
   /* Hide the images by default */
-  .mySlides {
+  /* .mySlides {
     display: block;
     position: absolute;
     right: 18rem;
     top: 5rem;
-  }
+  } */
   
   /* Next & previous buttons */
   .prev, .next {

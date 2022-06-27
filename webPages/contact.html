@@ -49,9 +49,14 @@
                 <form id="contactForm" action="https://formsubmit.co/kevinq.to@gmail.com" method="POST">
                     <h3>Get in touch!</h3>
 
+                        <label for="name">Name: </label>
                         <input type="text" id="name" name="name" placeholder="Your name" required>
+
+                        <label for="email">Email: </label>
                         <input type="email" id="email" name="email" placeholder="example@gmail.com" required>
-                        <textarea name="message" id="message" rows="10" placeholder="Write here :)"></textarea>
+
+                        <label for="message">Message: </label>
+                        <textarea name="message" id="message" rows="10" placeholder="Yo Kev!"></textarea>
                         <input type="hidden" name="_subject" value="New submission!">
 
                         <button type="submit" id="formButton" onclick="validateEmail()">Send</button>

@@ -44,7 +44,7 @@ function moveToPrevSlide() {
 }
 
 
-
+//email validation
 let emailField = document.getElementById("email");
 const formButton = document.querySelector('#formButton');
 const form = document.getElementById('contactForm');
@@ -89,7 +89,6 @@ function copiedToClipboard() {
 const revert = document.querySelector('.email');
 
 revert.addEventListener('mouseenter', () => {
-    console.log('This is working');
     document.querySelector('.tooltip').innerText = 'Click to copy!';
 })
 
