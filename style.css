@@ -185,11 +185,12 @@ a:visited {
 }
 
 .aboutContainer {
+    width: 35rem;
     padding: 20px;
     height: fit-content;
     background-color: #fff;
     position: absolute;
-    left: 910px;
+    left: 47rem;
     top: 110px;
     right: 100px;
     border-radius: 6px;
