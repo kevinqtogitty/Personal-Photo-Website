@@ -197,8 +197,8 @@ a:visited {
 }
 
 .borderControl {
-    height: 400px;
-    width: 600px;
+    height: 600px;
+    width: auto;
     left: 320px;
     top: 100px;
     position: relative;
